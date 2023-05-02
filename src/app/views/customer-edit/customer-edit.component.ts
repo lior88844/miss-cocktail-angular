@@ -31,7 +31,9 @@ export class CustomerEditComponent implements OnInit {
       error: (err) => console.log('err:', err),
     });
   }
-
+  onBack() {
+    this.router.navigateByUrl('/customer');
+  }
   ngOnDestroy(): void {
     this.subscription?.unsubscribe();
   }

@@ -78,14 +78,12 @@
       top: 4px;
       right: 4px;
       visibility: visible;
-      a:hover {
-        background-color: red;
-        svg {
-          cursor: pointer;
-          path {
-            fill: $clr2-dark;
-          }
-        }
+      font-size: 2rem;
+      gap: 10px;
+      *:hover {
+        background-color: $clr1-dark;
+        border-radius: $spacing-s;
+        text-decoration: none;
       }
     }
   }

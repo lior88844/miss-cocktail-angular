@@ -19,24 +19,22 @@
     </section>
     <section class="actions flex">
       <div class="remove">
-        <a>
-          <h1>Trash</h1>
-          <!-- <object
-            data="../../../assets/svg/Trash.svg"
-            type="image/svg+xml"
-            width="40"
-            height="40"
-          >
-            Your browser does not support SVG
-          </object> -->
-        </a>
+        <button
+          (click)="
+            $event.stopPropagation();
+            $event.preventDefault();
+            onRemoveCustomer()
+          "
+        >
+          <h1>🗑️</h1>
+        </button>
       </div>
       <div class="edit">
         <a
           routerLink="edit/{{ customer._id }}"
           (click)="$event.stopPropagation(); $event.preventDefault()"
         >
-          <h1>edit</h1>
+          <h1>✍🏻</h1>
         </a>
       </div>
     </section>

@@ -22,4 +22,7 @@ export class CustomerPreviewComponent implements OnInit {
         this.cocktail = cocktail;
       });
   }
+  onRemoveCustomer() {
+    this.remove.emit(this.customer._id);
+  }
 }

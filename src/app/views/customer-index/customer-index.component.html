@@ -1,5 +1,13 @@
 <section class="customer-index">
   <router-outlet />
+  <section class="customer-add">
+    <p>
+      Add a new customer to the website to track and serve their favorite drinks
+    </p>
+    <a routerLink="/customer/edit">
+      <button>Add a new customer</button>
+    </a>
+  </section>
   <customer-list
     *ngIf="customers?.length"
     (remove)="onRemoveCustomer($event)"

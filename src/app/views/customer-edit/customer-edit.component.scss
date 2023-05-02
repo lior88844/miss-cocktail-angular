@@ -46,4 +46,12 @@
       padding: 8px;
     }
   }
+  .back-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
 }

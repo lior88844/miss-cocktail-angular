@@ -1,6 +1,7 @@
 <section class="customer-edit">
+  <button class="back-btn"(click)="onBack()">X</button>
   <section class="customer-edit-wrapper">
-    <h2>{{ "Add" }} customer</h2>
+    <h2>{{ customer._id ? "Edit" : "Add" }} customer</h2>
     <form class="customer-edit-form" (ngSubmit)="onSaveCustomer()">
       <label for="name">Name</label>
       <input [(ngModel)]="customer.name" type="text" name="name" id="name" />

@@ -16,6 +16,8 @@ import { HomepageComponent } from './views/homepage/homepage.component';
 import { InfoGridComponent } from './cmps/info-grid/info-grid.component';
 import { CocktailRecipeComponent } from './cmps/cocktail-recipe/cocktail-recipe.component';
 import { CustomerEditComponent } from './views/customer-edit/customer-edit.component';
+import { StatisticsComponent } from './views/statistics/statistics.component';
+import { LineChartComponent } from './cmps/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { CustomerEditComponent } from './views/customer-edit/customer-edit.compo
     InfoGridComponent,
     CocktailRecipeComponent,
     CustomerEditComponent,
+    StatisticsComponent,
+    LineChartComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

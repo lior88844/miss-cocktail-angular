@@ -7,6 +7,7 @@ import { CustomerService } from 'src/app/services/customer.service';
 @Component({
   selector: 'customer-index',
   templateUrl: './customer-index.component.html',
+  styleUrls: ['./customer-index.component.scss'],
 })
 export class CustomerIndexComponent implements OnInit, OnDestroy {
   constructor(private customerService: CustomerService) {}
@@ -26,7 +27,6 @@ export class CustomerIndexComponent implements OnInit, OnDestroy {
 
   onRemoveCustomer(customerId: string) {
     console.log('from index');
-
     this.customerService.remove(customerId).subscribe({
       error: (err) => console.log('err:', err),
     });

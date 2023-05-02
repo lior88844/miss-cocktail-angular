@@ -1,0 +1,31 @@
+@import "../../../styles.scss";
+.customer-add {
+  font-family: cormorant-bold;
+  grid-column: -1/1;
+  @include flex-center;
+  gap: 10px;
+  height: 100px;
+  padding: 0px 40px;
+  background-color: white;
+  margin-block-end: $spacing-xl;
+  font-size: rem(24px);
+  p {
+    text-align: center;
+  }
+  a {
+    border: 1px solid black;
+    border-radius: rem(24px);
+    padding: 8px;
+    text-decoration: none;
+    margin-inline-start: rem(5px);
+    font-family: roboto;
+    font-size: rem(16px);
+    button {
+      @include flex-center;
+      gap: 5px;
+    }
+    &:hover {
+      background: $clr1;
+    }
+  }
+}
