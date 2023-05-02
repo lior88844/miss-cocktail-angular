@@ -1,0 +1,44 @@
+<a
+  routerLink="/customer/{{ customer._id }}"
+  class="customer-preview card"
+  (click)="$event.stopPropagation()"
+>
+  <div class="card-bcg"></div>
+  <div class="card-content">
+    <section class="cocktail flex">
+      <img *ngIf="cocktail" [src]="cocktail.img" />
+      <h1>{{ customer.cocktail }}</h1>
+    </section>
+    <section class="customer flex">
+      <section class="info">
+        <img
+          src="https://api.dicebear.com/6.x/micah/svg?seed={{ customer._id }}"
+        />
+        <h2>{{ customer.name }}</h2>
+      </section>
+    </section>
+    <section class="actions flex">
+      <div class="remove">
+        <a>
+          <h1>Trash</h1>
+          <!-- <object
+            data="../../../assets/svg/Trash.svg"
+            type="image/svg+xml"
+            width="40"
+            height="40"
+          >
+            Your browser does not support SVG
+          </object> -->
+        </a>
+      </div>
+      <div class="edit">
+        <a
+          routerLink="edit/{{ customer._id }}"
+          (click)="$event.stopPropagation(); $event.preventDefault()"
+        >
+          <h1>edit</h1>
+        </a>
+      </div>
+    </section>
+  </div>
+</a>

@@ -1,0 +1,7 @@
+<div class="customer-list">
+  <customer-preview
+    (remove)="remove.emit($event)"
+    *ngFor="let customer of customers"
+    [customer]="customer"
+  ></customer-preview>
+</div>

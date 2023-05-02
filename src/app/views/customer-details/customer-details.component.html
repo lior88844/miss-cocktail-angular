@@ -1,0 +1,29 @@
+<section class="customer-details">
+  <section className="cocktail">
+    <div className="cocktail-background"></div>
+    <cocktail-recipe [cocktail]="cocktail" />
+  </section>
+  <section class="customer">
+    <section class="customer-info" *ngIf="customer">
+      <div class="customer-avatar">
+        <img
+          src="https://api.dicebear.com/6.x/micah/svg?seed={{ customer._id }}"
+        />
+        <h3>{{ customer.name }}</h3>
+      </div>
+      <table class="customer-drinks">
+        <tbody>
+          <tr>
+            <td>Spirit</td>
+            <td>{{ customer.spirit }}</td>
+          </tr>
+          <tr>
+            <td>Cocktail</td>
+            <td>{{ customer.cocktail }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+  <button class="btn-back" (click)="onBack()">Back</button>
+</section>

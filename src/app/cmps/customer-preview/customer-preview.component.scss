@@ -1,0 +1,95 @@
+@import "../../../styles.scss";
+.card :host {
+  height: 400px;
+}
+.card {
+  position: relative;
+  display: flex;
+  list-style: none;
+  height: rem(400px);
+  transition: 0.4s transform;
+  &:hover {
+    .card-content .cocktail img {
+      filter: brightness(50%);
+    }
+  }
+  &-bcg {
+    background-color: grey;
+    background-size: cover;
+    background-position: center;
+    border-radius: $spacing-l;
+    position: absolute;
+    transition: transform 0.4s;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition: filter 200ms linear, transform 200ms linear;
+  }
+  &-content {
+    position: absolute;
+    display: grid;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: $clr2;
+    fill: $clr2;
+    .cocktail {
+      position: relative;
+      img {
+        border-top-right-radius: $spacing-l;
+        border-top-left-radius: $spacing-l;
+        transition: filter 0.5s;
+      }
+      h1 {
+        position: absolute;
+        bottom: 4px;
+        left: 4px;
+        color: white;
+      }
+    }
+    .customer {
+      .info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        & > * {
+          margin-inline-end: 20px;
+        }
+        img {
+          height: 80px;
+        }
+        h2 {
+          font-family: cormorant-bold;
+          font-size: rem(24px);
+        }
+        h4 {
+          font-size: rem(30px);
+        }
+      }
+    }
+    .actions {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      visibility: visible;
+      a:hover {
+        background-color: red;
+        svg {
+          cursor: pointer;
+          path {
+            fill: $clr2-dark;
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}

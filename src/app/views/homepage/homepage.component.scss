@@ -1,0 +1,26 @@
+@import "../../app-root/app.component.scss";
+.homepage {
+  height: 100%;
+  .landing-page {
+    position: relative;
+    height: rem(600px);
+    width: 100%;
+    overflow: hidden;
+    h1 {
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      width: 70%;
+      font-family: cormorant-semi;
+      text-align: center;
+      font-size: rem(70px);
+      color: white;
+    }
+    video {
+      width: 100%;
+      filter: brightness(50%);
+    }
+  }
+}

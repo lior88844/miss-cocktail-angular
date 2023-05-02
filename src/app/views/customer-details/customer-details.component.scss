@@ -1,0 +1,61 @@
+@import "../../../styles.scss";
+.customer-details {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
+  text-align: center;
+
+  .cocktail {
+    position: relative;
+    &-background {
+      @include background;
+      width: 100%;
+      height: 100%;
+      filter: brightness(50%);
+    }
+  }
+  .customer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: rem($spacing-l);
+    padding: rem($spacing-m);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    &-avatar {
+      margin-block-end: 10px;
+      img {
+        @include avatar;
+      }
+    }
+    &-drinks {
+      width: 60%;
+      margin: auto;
+      tr,
+      td,
+      table {
+        border: 1px solid $clr3;
+        border-collapse: collapse;
+        & :nth-child(2n) {
+          color: $clr2-dark;
+        }
+      }
+      td {
+        padding: $spacing-m;
+      }
+    }
+  }
+  .btn-back {
+    @include flex-center;
+    gap: 4px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: $clr1;
+    padding: 20px;
+    border-radius: $spacing-m;
+  }
+}

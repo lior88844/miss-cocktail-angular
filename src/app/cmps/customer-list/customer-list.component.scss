@@ -1,0 +1,13 @@
+@import "../../../styles.scss";
+.customer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: $spacing-xl;
+  justify-content: center;
+  padding: 20px 100px;
+  &:hover .card:not(:hover) {
+    .actions {
+      visibility: hidden;
+    }
+  }
+}

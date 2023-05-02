@@ -1,0 +1,13 @@
+// Setup
+@import "./assets/scss/setup/variables";
+@import "./assets/scss/setup/functions";
+@import "./assets/scss/setup/mixins";
+@import "./assets/scss/setup/typography";
+
+// Basics
+
+@import "./assets/scss/basics/base";
+@import "./assets/scss/basics/helpers";
+@import "./assets/scss/basics/layout";
+@import "./assets/scss/basics/modals";
+@import "./assets/scss/basics/animations";

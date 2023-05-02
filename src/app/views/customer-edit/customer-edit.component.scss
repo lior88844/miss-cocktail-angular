@@ -1,0 +1,49 @@
+@import "../../../styles.scss";
+
+.customer-edit {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-color: $clr2-dark;
+  border-radius: $spacing-xl;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 0 100vw 100vh rgba(0, 0, 0, 0.5);
+  &-wrapper {
+    padding: $spacing-m $spacing-xxl $spacing-xxl $spacing-xxl;
+    @include flex-center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.665);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    & > :nth-child(1) {
+      margin-block-end: 1rem;
+      margin-block-start: 1rem;
+    }
+  }
+  .customer-img {
+    @include avatar;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    input {
+      width: rem(230px);
+      resize: auto;
+      padding: 8px;
+      border-radius: $spacing-s;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      margin-block-start: 1rem;
+      text-align: center;
+      padding: 8px;
+    }
+  }
+}

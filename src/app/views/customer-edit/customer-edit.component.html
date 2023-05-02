@@ -1,0 +1,26 @@
+<section class="customer-edit">
+  <section class="customer-edit-wrapper">
+    <h2>{{ "Add" }} customer</h2>
+    <form class="customer-edit-form" (ngSubmit)="onSaveCustomer()">
+      <label for="name">Name</label>
+      <input [(ngModel)]="customer.name" type="text" name="name" id="name" />
+
+      <label for="cocktail">Cocktail</label>
+      <input
+        [(ngModel)]="customer.cocktail"
+        type="text"
+        name="cocktail"
+        id="cocktail"
+      />
+
+      <label for="spirit">Spirit</label>
+      <input
+        [(ngModel)]="customer.spirit"
+        type="text"
+        name="spirit"
+        id="spirit"
+      />
+      <input type="submit" />
+    </form>
+  </section>
+</section>

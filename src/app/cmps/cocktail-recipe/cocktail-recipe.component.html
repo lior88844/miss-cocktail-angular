@@ -1,0 +1,9 @@
+<div *ngIf="cocktail" className="cocktail-recipe">
+  <h1>{{ cocktail.name }}</h1>
+  <p>{{ cocktail.instructions }}</p>
+  <ul>
+    <li *ngFor="let ingredient of cocktail.ingredients" className="ingredient">
+      <article>{{ ingredient }}</article>
+    </li>
+  </ul>
+</div>

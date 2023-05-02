@@ -1,0 +1,66 @@
+@import "../../app-root/app.component.scss";
+.customer-filter {
+  position: relative;
+  background-image: url("../../../assets/img/cocktail-4.jpg");
+  @include background;
+  height: rem(400px);
+  grid-column: -1/1;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  > section {
+    display: flex;
+    flex-direction: column;
+  }
+  .filter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    .input-wrapper {
+      position: relative;
+      .svg {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      input {
+        color: $clr-black;
+        border: 2px solid transparent;
+        font-size: rem(20px);
+        min-width: 300px;
+        font-family: roboto;
+        border-radius: rem(36px);
+        padding: 16px 12px 16px 60px;
+        margin-inline-end: 2rem;
+      }
+    }
+    .select-wrapper {
+      font-size: 1rem;
+      display: inline-block;
+      margin: 3em 2em;
+      background-color: transparent;
+      position: relative;
+      cursor: pointer;
+      select {
+        background-color: white;
+        color: $clr-black;
+        border: 2px solid transparent;
+        font-size: rem(20px);
+        min-width: 200px;
+        font-family: roboto;
+        border-radius: rem(36px);
+        padding: 16px 12px 16px 60px;
+        margin-inline-end: 2rem;
+        outline: none;
+        &::-webkit-select-placeholder {
+          font-size: 14px;
+          color: red;
+        }
+      }
+    }
+  }
+}

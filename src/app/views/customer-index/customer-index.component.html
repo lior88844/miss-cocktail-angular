@@ -1,0 +1,8 @@
+<section class="customer-index">
+  <router-outlet />
+  <customer-list
+    *ngIf="customers?.length"
+    (remove)="onRemoveCustomer($event)"
+    [customers]="customers"
+  ></customer-list>
+</section>
