@@ -6,6 +6,8 @@ import { Cocktail } from 'src/app/models/cocktail.model';
   templateUrl: './cocktail-recipe.component.html',
   styleUrls: ['./cocktail-recipe.component.scss'],
 })
-export class CocktailRecipeComponent {
-  @Input() cocktail!: Cocktail | null;
+export class CocktailRecipeComponent implements OnInit {
+  @Input() cocktail!: Cocktail;
+
+  ngOnInit(): void {}
 }

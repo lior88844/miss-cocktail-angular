@@ -1,0 +1,9 @@
+@import "../../../styles.scss";
+.statistics {
+  @include flex-center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 80px;
+  height: 80%;
+}

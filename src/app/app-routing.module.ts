@@ -4,7 +4,13 @@ import { CustomerIndexComponent } from './views/customer-index/customer-index.co
 import { CustomerDetailsComponent } from './views/customer-details/customer-details.component';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import { CustomerEditComponent } from './views/customer-edit/customer-edit.component';
+import { StatisticsComponent } from './views/statistics/statistics.component';
 const routes: Routes = [
+  {
+    path: 'statistics',
+    component: StatisticsComponent,
+    pathMatch: 'full',
+  },
   {
     path: 'customer',
     component: CustomerIndexComponent,

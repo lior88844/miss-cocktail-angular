@@ -6,7 +6,7 @@
   <div class="card-bcg"></div>
   <div class="card-content">
     <section class="cocktail flex">
-      <img *ngIf="cocktail" [src]="cocktail.img" />
+      <img [src]="cocktail ? cocktail.img : './assets/img/cocktail.jpeg'" />
       <h1>{{ customer.cocktail }}</h1>
     </section>
     <section class="customer flex">
@@ -18,7 +18,7 @@
       </section>
     </section>
     <section class="actions flex">
-      <div class="remove">
+      <div class="remove action">
         <button
           (click)="
             $event.stopPropagation();
@@ -29,7 +29,7 @@
           <h1>🗑️</h1>
         </button>
       </div>
-      <div class="edit">
+      <div class="edit action">
         <a
           routerLink="edit/{{ customer._id }}"
           (click)="$event.stopPropagation(); $event.preventDefault()"

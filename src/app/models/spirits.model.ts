@@ -1,3 +1,2 @@
-export interface Spirits{
-    
+export interface SpiritsMap {
 }

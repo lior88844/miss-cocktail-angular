@@ -32,14 +32,18 @@ export class CustomerDetailsComponent implements OnInit {
         const id = params['id'];
         const customer = await lastValueFrom(this.customerService.getById(id));
         this.customer = customer;
+        this.loadCocktail();
       },
       error: (err) => console.log('err:', err),
     });
+  }
+
+  loadCocktail() {
+    if (!this.customer) return;
     this.subscription = this.cocktailService
-      .getCocktail(this.customer?.cocktail)
+      .getCocktail(this.customer.cocktail)
       .subscribe((cocktail) => {
         this.cocktail = cocktail;
-        console.log('cocktail', cocktail);
       });
   }
   onBack() {

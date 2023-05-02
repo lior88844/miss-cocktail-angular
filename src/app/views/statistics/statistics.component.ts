@@ -13,14 +13,26 @@ export class StatisticsComponent {
   subscription!: Subscription;
   customers: Customer[] | null = null;
   customers$!: Observable<Customer[]>;
-  spirits: Object = {};
+  spirits: { [key: string]: number } = {};
   ngOnInit() {
     this.customers$ = this.customerService.customers$;
-    console.log('this.customers', this.customers$);
     this.subscription = this.customerService.customers$.subscribe(
       (customers) => {
         this.customers = customers;
+        this.loadSpirits();
       }
     );
+  }
+  loadSpirits() {
+    if (!this.customers) return;
+    const spirits: { [key: string]: number } = this.customers.reduce(
+      (obj: { [key: string]: number }, { spirit }) => {
+        if (!obj[spirit]) obj[spirit] = 0;
+        obj[spirit]++;
+        return obj;
+      },
+      {}
+    );
+    this.spirits = spirits;
   }
 }

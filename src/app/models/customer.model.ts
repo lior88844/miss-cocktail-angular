@@ -1,7 +1,7 @@
 export interface Customer {
   _id: string;
   name: String;
-  spirit: String;
+  spirit: any;
   cocktail: String | undefined;
 }
 

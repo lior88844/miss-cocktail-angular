@@ -1,10 +1,14 @@
 <section class="customer-details">
-  <section className="cocktail">
-    <div className="cocktail-background"></div>
+  <section class="cocktail" *ngIf="cocktail">
+    <div
+      class="cocktail-background"
+      [style.backgroundImage]="'url(' + cocktail.img + ')'"
+    ></div>
     <cocktail-recipe [cocktail]="cocktail" />
   </section>
-  <section class="customer">
-    <section class="customer-info" *ngIf="customer">
+  <section class="customer" *ngIf="customer">
+    <button class="btn-back btn" (click)="onBack()">Back</button>
+    <section class="customer-info">
       <div class="customer-avatar">
         <img
           src="https://api.dicebear.com/6.x/micah/svg?seed={{ customer._id }}"
@@ -24,6 +28,9 @@
         </tbody>
       </table>
     </section>
+    <!-- <section class="paging" hidden>
+      <a routerLink="/customer/{{ customer._id }}" class="btn" >Prev</a>
+      <a routerLink="/customer/{{ customer._id }}" class="btn" >Next</a>
+    </section> -->
   </section>
-  <button class="btn-back" (click)="onBack()">Back</button>
 </section>

@@ -39,18 +39,19 @@ export class CocktailService {
       .pipe(map((res) => this._createCocktail(res)));
   }
 
-  private _createCocktail(res: any) {
-    const ingredients: Object[] = [];
+  private _createCocktail(res: any): Cocktail {
+    const ingredients: { ingredient: string; measure: string }[] = [];
     const instructions: string = res.strInstructions;
     const name: string = res.strDrink;
     const img: string = res.strDrinkThumb;
-    const price = 0;
-    const _id = '';
+    const price: number = 0;
+    const _id: string = '';
     for (var i = 0; i < 15; i++) {
       const ingredient = res[`strIngredient${i + 1}`];
       const measure = res[`strMeasure${i + 1}`];
-      if (ingredient && measure)
+      if (ingredient && measure) {
         ingredients.push({ ingredient: ingredient, measure: measure });
+      }
     }
     return { ingredients, instructions, name, img, price, _id };
   }
@@ -59,7 +60,7 @@ export class CocktailService {
     const cocktails: Cocktail[] = [
       {
         _id: '',
-        ingredients: [],
+        ingredients: [{ ingredient: '', measure: '' }],
         instructions: 'Make the cocktail',
         name: 'Margarita',
         img: '',

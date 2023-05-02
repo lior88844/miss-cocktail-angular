@@ -1,6 +1,6 @@
 export interface Cocktail {
   _id: string;
-  ingredients: Array<Object>;
+  ingredients: Array<{ ingredient: String; measure: String }>;
   instructions: String;
   name: String;
   img: String;

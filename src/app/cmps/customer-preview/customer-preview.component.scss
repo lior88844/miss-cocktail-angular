@@ -80,8 +80,12 @@
       visibility: visible;
       font-size: 2rem;
       gap: 10px;
+      * {
+        @include flex-center;
+        padding: 3px;
+      }
       *:hover {
-        background-color: $clr1-dark;
+        background-color: rgba(255, 255, 255, 0.246);
         border-radius: $spacing-s;
         text-decoration: none;
       }
@@ -89,5 +93,10 @@
   }
   &:hover {
     transform: scale(1.05);
+  }
+  &:not(:hover) {
+    .actions {
+      visibility: hidden;
+    }
   }
 }

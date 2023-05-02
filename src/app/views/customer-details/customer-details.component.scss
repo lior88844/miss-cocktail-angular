@@ -1,7 +1,7 @@
 @import "../../../styles.scss";
 .customer-details {
   position: relative;
-  height: 100%;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-flow: column;
@@ -17,10 +17,13 @@
     }
   }
   .customer {
+    position: relative;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: column;
     background-color: white;
-    margin: rem($spacing-l);
+    margin: rem($spacing-xxl);
     padding: rem($spacing-m);
     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
     border-radius: 2rem;
@@ -48,14 +51,26 @@
       }
     }
   }
-  .btn-back {
+  .paging {
+    justify-self: center;
+
+    display: flex;
+    gap: 20px;
+  }
+  .btn {
     @include flex-center;
     gap: 4px;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
     background-color: $clr1;
     padding: 20px;
     border-radius: $spacing-m;
+    text-decoration: none;
+    &:hover {
+      background-color: $clr1-dark;
+    }
+    &-back {
+      position: absolute;
+      left: -20px;
+      top: -20px;
+    }
   }
 }

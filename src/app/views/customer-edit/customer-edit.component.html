@@ -1,7 +1,18 @@
 <section class="customer-edit">
-  <button class="back-btn"(click)="onBack()">X</button>
+  <button class="back-btn" (click)="onBack()">X</button>
   <section class="customer-edit-wrapper">
-    <h2>{{ customer._id ? "Edit" : "Add" }} customer</h2>
+    <h3>{{ customer._id ? "Edit" : "Add" }} customer</h3>
+    <div
+      class="customer-img"
+      [style.backgroundImage]="
+        customer._id
+          ? 'url(https://api.dicebear.com/6.x/micah/svg?seed=' +
+            this.customer._id +
+            ')'
+          : 'url(./assets/img/user.png)'
+      "
+    ></div>
+
     <form class="customer-edit-form" (ngSubmit)="onSaveCustomer()">
       <label for="name">Name</label>
       <input [(ngModel)]="customer.name" type="text" name="name" id="name" />

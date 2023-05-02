@@ -17,7 +17,6 @@ export class CustomerIndexComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.customers$ = this.customerService.customers$;
-    console.log('this.customers', this.customers$);
     this.subscription = this.customerService.customers$.subscribe(
       (customers) => {
         this.customers = customers;
